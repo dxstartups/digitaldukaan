@@ -1,5 +1,7 @@
 package com.digitalstartups.digitaldukaan.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import org.bson.codecs.pojo.annotations.BsonId;
 import org.bson.codecs.pojo.annotations.BsonProperty;
 
@@ -15,24 +17,31 @@ public class User {
 
 
     @BsonId
+    @SerializedName(FIELD_EMAIL)
     private String id; // email address
 
     @BsonProperty(FIELD_FIRSTNAME)
+    @SerializedName(FIELD_FIRSTNAME)
     private String firstName;
 
     @BsonProperty(FIELD_LASTNAME)
+    @SerializedName(FIELD_LASTNAME)
     private String lastName;
 
     @BsonProperty(FIELD_CONTACT)
+    @SerializedName(FIELD_CONTACT)
     private String contactNumber;
 
     @BsonProperty(FIELD_LICENSE)
+    @SerializedName(FIELD_LICENSE)
     private String licenseNumber;
 
     @BsonProperty(FIELD_ADDRESS)
+    @SerializedName(FIELD_ADDRESS)
     private String address;
 
     @BsonProperty(FIELD_PASSWORD)
+    @SerializedName(FIELD_PASSWORD)
     private String password;
 
     public String getFirstName() {

@@ -1,5 +1,7 @@
 package com.digitalstartups.digitaldukaan.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import org.bson.codecs.pojo.annotations.BsonId;
 import org.bson.codecs.pojo.annotations.BsonProperty;
 
@@ -16,27 +18,35 @@ public class ShopItem {
 
 
     @BsonId
+    @SerializedName(FIELD_ID)
     private String id;
 
     @BsonProperty(FIELD_TYPE)
+    @SerializedName(FIELD_TYPE)
     private String type;
 
     @BsonProperty(FIELD_ITEM_NAME)
+    @SerializedName(FIELD_ITEM_NAME)
     private String itemName;
 
     @BsonProperty(FIELD_QUANTITY)
+    @SerializedName(FIELD_QUANTITY)
     private int quantity;
 
     @BsonProperty(FIELD_PRICE)
+    @SerializedName(FIELD_PRICE)
     private double price;
 
     @BsonProperty(FIELD_UOM)
+    @SerializedName(FIELD_UOM)
     private String uom;
 
     @BsonProperty(FIELD_BUTCHER)
+    @SerializedName(FIELD_BUTCHER)
     private String butcherName;
 
     @BsonProperty(FIELD_SHOP_ID)
+    @SerializedName(FIELD_SHOP_ID)
     private String shopId;
 
     public String getId() {

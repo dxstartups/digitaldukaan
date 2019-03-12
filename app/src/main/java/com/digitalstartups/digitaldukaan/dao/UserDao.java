@@ -6,11 +6,19 @@ import java.util.Optional;
 
 public interface UserDao {
 
+
+    /**
+     *
+     * @param user
+     */
+    void registerUser(User user);
+
     /**
      *
      * @param id
      * @return
      */
     Optional<User> findUserById(String id);
+
 
 }
