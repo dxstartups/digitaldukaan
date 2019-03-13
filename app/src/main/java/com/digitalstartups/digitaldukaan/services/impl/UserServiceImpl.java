@@ -5,6 +5,8 @@ import com.digitalstartups.digitaldukaan.dao.impl.UserDaoImpl;
 import com.digitalstartups.digitaldukaan.models.User;
 import com.digitalstartups.digitaldukaan.services.UserService;
 
+import org.apache.commons.validator.routines.EmailValidator;
+
 import java.util.Optional;
 
 public class UserServiceImpl implements UserService {
@@ -19,7 +21,7 @@ public class UserServiceImpl implements UserService {
     }
 
     private boolean validateRegistrationDetails(User user) {
-        return true;
+        return EmailValidator.getInstance().isValid(user.getId().trim());
     }
 
     @Override
